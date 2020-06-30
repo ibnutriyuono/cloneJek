@@ -1,12 +1,21 @@
 import React, {Component} from 'react';
-import {Text, View, Image} from 'react-native';
+import {Text, View, Image, TextInput} from 'react-native';
 
 export default class App extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <View style={{flex: 1, backgroundColor: 'white'}}>
-          <Text> XD </Text>
+        <View style={{flex: 1, backgroundColor: 'white', marginTop:30}}>
+          {/* searchbar */}
+          <View style={{ marginHorizontal: 16, flexDirection: 'row', paddingTop: 16 }}>
+            <View style={{ position: 'relative', flex: 1, justifyContent: 'center' }}>
+              <TextInput placeholder='What do you want to eat?' style={{ borderWidth: 1, borderColor: '#E8E8E8E8', borderRadius: 25, height: 40, fontSize: 13, paddingLeft: 45, paddingRight: 20, backgroundColor: 'white' }} />
+              <Image source={require('./assets/icon/search.png')} style={{ position: 'absolute', top: 8, left: 12 }} />
+            </View>
+            <View style={{ width: 35, alignItems: 'center', justifyContent: 'center', marginStart: 16 }}>
+              <Image source={require('./assets/icon/promo.png')} />
+            </View>
+          </View>
         </View>
         <View
           style={{
